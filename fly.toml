@@ -30,6 +30,10 @@ console_command = 'php /var/www/html/artisan tinker'
   min_machines_running = 0
   processes = ['app']
 
+[deploy]
+  release_command = "php /var/www/html/artisan migrate --force"
+
+
 [[vm]]
   memory = '1gb'
   cpu_kind = 'shared'
